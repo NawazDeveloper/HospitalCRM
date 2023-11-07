@@ -1,0 +1,343 @@
+﻿@model App.Models.ViewModel.PatientViewModel
+
+<div class="col-xl-12 col-lg-12">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">CaseSheet Details</h4>
+        </div>
+        <div class="card-body">
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">complaintsOf:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.complaintsOf)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">HistoryOfPresentingIllness:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.HistoryOfPresentingIllness)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Past History:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.PastHistory)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Personal History:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.PersonalHistory)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Diet:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Diet)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Appetite:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Appetite)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Sleep:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Sleep)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Bowel:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Bowel)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Bladder:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Bladder)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Addiction:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Addiction)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">FamilyHistory:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.FamilyHistory)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Vitals:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Vitals)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">BP:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.BP)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">PR:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.PR)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">RR:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.RR)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Temp:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Temp)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">SpO2:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.SpO2)
+                </div>
+            </div>
+
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Pallor:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Pallor)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Icterus:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Icterus)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Cyanosis:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Cyanosis)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Clubbing:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Clubbing)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">PedalEdema:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.PedalEdema)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Lymphadenopathy:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Lymphadenopathy)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">CNS:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.CNS)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Cardiovascular System:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.CardiovascularSystem)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Respiratory System:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.RespiratorySystem)
+                </div>
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">PerAbdomen:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.PerAbdomen)
+                </div>
+            </div>
+
+
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Umbilicus:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Umbilicus)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Movements:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Movements)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">DilatedVeins:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.DilatedVeins)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">VisiblePeristalsis:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.VisiblePeristalsis)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Pulsations:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Pulsations)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">ScarMarks:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.ScarMarks)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">LocalisedSweling:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.LocalisedSweling)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Pulpation:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Pulpation)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Temprature:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Temprature)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">TendernessRebound:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.TendernessRebound)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">GuardingRigidity:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.GuardingRigidity)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Percussion:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Percussion)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">ShiftingDullness:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.ShiftingDullness)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">FluidThrill:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.FluidThrill)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Auscultation:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Auscultation)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">BowelSounds:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.BowelSounds)
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-3 col-form-label">Remark:</label>
+                <div class="col-sm-9">
+                    @Html.DisplayFor(model => model.CaseSheet.Remark)
+                </div>
+            </div>
+
+            @*<div class="form-group row">
+            <label class="col-sm-3 col-form-label">Value1:</label>
+            <div class="col-sm-9">
+            @Html.DisplayFor(model => model.CaseSheet.Value1)
+            </div>
+            </div>
+
+            <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Value2:</label>
+            <div class="col-sm-9">
+            @Html.DisplayFor(model => model.CaseSheet.Value2)
+            </div>
+            </div>
+
+            <div class="form-group row">
+            <label class="col-sm-3 col-form-label">Value3:</label>
+            <div class="col-sm-9">
+            @Html.DisplayFor(model => model.CaseSheet.Value3)
+            </div>
+            </div>*@
+
+            <a target="_blank" href="@Url.Action("CaseSheet", "Patient",  new { PatientID = @Model.CaseSheet.PatientID,ViewName="Print" })" class="btn btn-primary">Print Data</a>
+        </div>
+    </div>
+</div>

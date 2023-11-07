@@ -1,0 +1,326 @@
+﻿@model App.Models.ViewModel.PatientViewModel
+
+@{
+    ViewData["Title"] = "CaseSheet";
+}
+
+
+<!--**********************************
+           Content body start
+       ***********************************-->
+<div class="row">
+
+    <div class="col-xl-12 col-lg-12">
+        <div class="card">
+            <div class="card-body">
+                <div class="basic-form">
+                    <form method="post" id="AddCaseSheetForm" onsubmit="return getCaseSheetFromModel()">
+                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                        <div class="form-group">
+                            <input type="hidden" asp-for="CaseSheet.PatientID" class="control-label">
+                            <input type="hidden" asp-for="CaseSheet.Id" class="control-label">
+                            @*<select asp-for="CaseSheet.PatientID" class="form-control" asp-items="ViewBag.PatientID"></select>*@
+                        </div>
+                        <div class="row">
+                            <div class="form-group  col-md-12">
+                                <label asp-for="CaseSheet.complaintsOf" class="control-label">PRESENTING COMPLAINTS</label>
+                                <textarea asp-for="CaseSheet.complaintsOf" class="form-control" rows="3"> </textarea>
+                                <span asp-validation-for="CaseSheet.complaintsOf" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group  col-md-12">
+                                <label asp-for="CaseSheet.HistoryOfPresentingIllness" class="control-label">HISTORY OF PRESENTING ILLNESS</label>
+                                <textarea asp-for="CaseSheet.HistoryOfPresentingIllness" class="form-control" rows="3"> </textarea>
+                                <span asp-validation-for="CaseSheet.HistoryOfPresentingIllness" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group  col-md-12">
+                                <label asp-for="CaseSheet.PastHistory" class="control-label"></label>
+                                <textarea asp-for="CaseSheet.PastHistory" class="form-control" rows="3"></textarea>
+                                <span asp-validation-for="CaseSheet.PastHistory" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group  col-md-12">
+                                <label asp-for="CaseSheet.PersonalHistory" class="control-label">PERSONAL HISTORY</label>
+                                <textarea asp-for="CaseSheet.PersonalHistory" class="form-control"></textarea>
+                                <span asp-validation-for="CaseSheet.PersonalHistory" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Diet" class="control-label"></label>
+                                <input asp-for="CaseSheet.Diet" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Diet" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Appetite" class="control-label"></label>
+                                <input asp-for="CaseSheet.Appetite" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Appetite" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Sleep" class="control-label"></label>
+                                <input asp-for="CaseSheet.Sleep" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Sleep" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Bowel" class="control-label"></label>
+                                <input asp-for="CaseSheet.Bowel" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Bowel" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Bladder" class="control-label"></label>
+                                <input asp-for="CaseSheet.Bladder" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Bladder" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Addiction" class="control-label"></label>
+                                <input asp-for="CaseSheet.Addiction" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Addiction" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label asp-for="CaseSheet.FamilyHistory" class="control-label"></label>
+                                <textarea asp-for="CaseSheet.FamilyHistory" class="form-control" rows="3"></textarea>
+                                <span asp-validation-for="CaseSheet.FamilyHistory" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Vitals" class="control-label"></label>
+                                <input asp-for="CaseSheet.Vitals" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Vitals" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.BP" class="control-label"></label>
+                                <input asp-for="CaseSheet.BP" class="form-control" />
+                                <span asp-validation-for="CaseSheet.BP" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.PR" class="control-label"></label>
+                                <input asp-for="CaseSheet.PR" class="form-control" />
+                                <span asp-validation-for="CaseSheet.PR" class="text-danger"></span>
+                            </div>
+
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.RR" class="control-label"></label>
+                                <input asp-for="CaseSheet.RR" class="form-control" />
+                                <span asp-validation-for="CaseSheet.RR" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Temp" class="control-label"></label>
+                                <input asp-for="CaseSheet.Temp" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Temp" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.SpO2" class="control-label"></label>
+                                <input asp-for="CaseSheet.SpO2" class="form-control" />
+                                <span asp-validation-for="CaseSheet.SpO2" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <h3 class="my-3">General Examination</h3>
+                           
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Icterus" class="control-label"></label>
+                                <input asp-for="CaseSheet.Icterus" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Icterus" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Cyanosis" class="control-label"></label>
+                                <input asp-for="CaseSheet.Cyanosis" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Cyanosis" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Clubbing" class="control-label"></label>
+                                <input asp-for="CaseSheet.Clubbing" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Clubbing" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.PedalEdema" class="control-label"></label>
+                                <input asp-for="CaseSheet.PedalEdema" class="form-control" />
+                                <span asp-validation-for="CaseSheet.PedalEdema" class="text-danger"></span>
+                            </div>
+
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Pallor" class="control-label"></label>
+                                <input asp-for="CaseSheet.Pallor" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Pallor" class="text-danger"></span>
+                            </div>
+                        
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Lymphadenopathy" class="control-label"></label>
+                                <input asp-for="CaseSheet.Lymphadenopathy" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Lymphadenopathy" class="text-danger"></span>
+                            </div>
+                        </div>
+                       
+                        
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.CNS" class="control-label">CNS</label>
+                                <input asp-for="CaseSheet.CNS" class="form-control" />
+                                <span asp-validation-for="CaseSheet.CNS" class="text-danger"></span>
+                            </div>
+                        
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.CardiovascularSystem" class="control-label">Cardiovascular system</label>
+                                <input asp-for="CaseSheet.CardiovascularSystem" class="form-control" />
+                                <span asp-validation-for="CaseSheet.CardiovascularSystem" class="text-danger"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.RespiratorySystem" class="control-label">Respiratory system</label>
+                                <input asp-for="CaseSheet.RespiratorySystem" class="form-control" />
+                                <span asp-validation-for="CaseSheet.RespiratorySystem" class="text-danger"></span>
+                            </div>
+                            
+                       
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.PerAbdomen" class="control-label">Per Abdomen</label>
+                                <input asp-for="CaseSheet.PerAbdomen" class="form-control" />
+                                <span asp-validation-for="CaseSheet.PerAbdomen" class="text-danger"></span>
+                            </div>
+                           
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Umbilicus" class="control-label"></label>
+                                <input asp-for="CaseSheet.Umbilicus" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Umbilicus" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Movements" class="control-label"></label>
+                                <input asp-for="CaseSheet.Movements" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Movements" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.DilatedVeins" class="control-label"></label>
+                                <input asp-for="CaseSheet.DilatedVeins" class="form-control" />
+                                <span asp-validation-for="CaseSheet.DilatedVeins" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.VisiblePeristalsis" class="control-label"></label>
+                                <input asp-for="CaseSheet.VisiblePeristalsis" class="form-control" />
+                                <span asp-validation-for="CaseSheet.VisiblePeristalsis" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Pulsations" class="control-label"></label>
+                                <input asp-for="CaseSheet.Pulsations" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Pulsations" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.ScarMarks" class="control-label"></label>
+                                <input asp-for="CaseSheet.ScarMarks" class="form-control" />
+                                <span asp-validation-for="CaseSheet.ScarMarks" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.LocalisedSweling" class="control-label"></label>
+                                <input asp-for="CaseSheet.LocalisedSweling" class="form-control" />
+                                <span asp-validation-for="CaseSheet.LocalisedSweling" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Pulpation" class="control-label"></label>
+                                <input asp-for="CaseSheet.Pulpation" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Pulpation" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Temprature" class="control-label"></label>
+                                <input asp-for="CaseSheet.Temprature" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Temprature" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.TendernessRebound" class="control-label"></label>
+                                <input asp-for="CaseSheet.TendernessRebound" class="form-control" />
+                                <span asp-validation-for="CaseSheet.TendernessRebound" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.GuardingRigidity" class="control-label"></label>
+                                <input asp-for="CaseSheet.GuardingRigidity" class="form-control" />
+                                <span asp-validation-for="CaseSheet.GuardingRigidity" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Percussion" class="control-label"></label>
+                                <input asp-for="CaseSheet.Percussion" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Percussion" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.ShiftingDullness" class="control-label"></label>
+                                <input asp-for="CaseSheet.ShiftingDullness" class="form-control" />
+                                <span asp-validation-for="CaseSheet.ShiftingDullness" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.FluidThrill" class="control-label"></label>
+                                <input asp-for="CaseSheet.FluidThrill" class="form-control" />
+                                <span asp-validation-for="CaseSheet.FluidThrill" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Auscultation" class="control-label"></label>
+                                <input asp-for="CaseSheet.Auscultation" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Auscultation" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.BowelSounds" class="control-label"></label>
+                                <input asp-for="CaseSheet.BowelSounds" class="form-control" />
+                                <span asp-validation-for="CaseSheet.BowelSounds" class="text-danger"></span>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <label asp-for="CaseSheet.Remark" class="control-label"></label>
+                                <input asp-for="CaseSheet.Remark" class="form-control" />
+                                <span asp-validation-for="CaseSheet.Remark" class="text-danger"></span>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="alert alert-primary" role="alert" id="CaseSheetMessage" style="display: none;"></div>
+                            <div class="alert alert-warning" role="alert" id="CaseSheetErrorMessage" style="display: none;"></div>
+                            <input type="submit" id="CaseSheetBtn" value="Save" class="btn btn-primary" />
+                            <input type="hidden" name="CaseSheetModelsJson" id="CaseSheetModelsJson" />
+                        </div>
+                         
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--**********************************
+    Content body end
+***********************************-->
+<script src="~/customJs/CaseSheet.js"></script>

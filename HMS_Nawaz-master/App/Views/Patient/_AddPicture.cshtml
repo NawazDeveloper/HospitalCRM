@@ -1,0 +1,222 @@
+﻿@model App.Models.ViewModel.PatientViewModel
+
+
+
+
+<form method="post" id="AddImageForm" enctype="multipart/form-data">
+    <div>
+        
+        <div class="row">
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>Blood sugar img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.BloodSugar_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.BloodSugar_img" class="text-danger"></span>
+                </div>
+            </div>
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>TFT img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.TFT_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.TFT_img" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>USG img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.USG_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.USG_img" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>SONOMMOGRAPHY img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.SONOMMOGRAPHY_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.SONOMMOGRAPHY_img" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>CECT img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.CECT_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.CECT_img" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>MRI img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.MRI_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.MRI_img" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>FNAC img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.FNAC_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.FNAC_img" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>TRUCUT BIOPSY img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.TrucutBiopsy_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.TrucutBiopsy_img" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>Receptor status img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.ReceptorStatus_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.ReceptorStatus_img" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>MRCP img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.MRCP_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.MRCP_img" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>ERCP img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.ERCP_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.ERCP_img" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>Endoscopy - uper GI img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.EndoscopyUpperGI_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.EndoscopyUpperGI_img" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>Endoscopy - lower GI img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.EndoscopyLowerGI_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.EndoscopyLowerGI_img" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>PET-CT img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.PETCT_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.PETCT_img" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>Tumor markers img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.TumorMarkers_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.TumorMarkers_img" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>IVP img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.IVP_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.IVP_img" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>MCU img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.MCU_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.MCU_img" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>RGU img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input asp-for="InvestigationImagesModel.RGU_img" class="form-control" />
+                    <span asp-validation-for="InvestigationImagesModel.RGU_img" class="text-danger"></span>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+           
+            <div class="col-6 col-sm-3 mb-2">
+                <h4>Others img</h4>
+            </div>
+            <div class="col-md-3 col-6 col-sm-4 mb-2">
+                <div class="form-group">
+                    <input class="form-control" type="file">
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div class="form-group">
+        <div class="alert alert-primary" role="alert" id="ImageSuccessMessage" style="display: none;"></div>
+        <div class="alert alert-warning" role="alert" id="ImageErrorMessage" style="display: none;"></div>
+        <input type="button" value="Save" id="Imagebtn" class="btn btn-primary" />
+
+    </div>
+</form>
+
+
+<script src="~/customJs/ImageLoad.js"></script>
+
+

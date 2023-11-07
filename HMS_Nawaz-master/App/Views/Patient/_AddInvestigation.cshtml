@@ -1,0 +1,257 @@
+﻿@model App.Models.ViewModel.PatientViewModel
+
+
+
+<form method="post" id="Investigationform" onsubmit="return getInvestigationModels()">
+
+    <div class="row">
+        <div class="form-group col-md-6">
+            <input type="hidden" asp-for="InvestigationModel.PatientId" class="form-control" />
+            <h4>Day</h4>
+            <input asp-for="InvestigationModel.Day" class="form-control" />
+            <span asp-validation-for="InvestigationModel.Day" class="text-danger"></span>
+
+        </div>
+    </div>
+   
+    <div class="row">
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>BLOOD SUGAR</h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.BloodSugar" class="form-control" placeholder="Enter Blood sugar..." />
+                <span asp-validation-for="InvestigationModel.BloodSugar" class="text-danger"></span>
+            </div>
+        </div>
+            
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>TFT </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.TFT" class="form-control" placeholder="Enter TFT..." />
+                <span asp-validation-for="InvestigationModel.TFT" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>USG </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.USG" class="form-control" placeholder="Enter USG..." />
+                <span asp-validation-for="InvestigationModel.USG" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>SONOMMOGRAPHY </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.SONOMMOGRAPHY" class="form-control" placeholder="Enter SONOMMOGRAPHY..." />
+                <span asp-validation-for="InvestigationModel.SONOMMOGRAPHY" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>CECT </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.CECT" class="form-control" placeholder="Enter CECT..." />
+                <span asp-validation-for="InvestigationModel.CECT" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>MRI </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.MRI" class="form-control" placeholder="Enter MRI..." />
+                <span asp-validation-for="InvestigationModel.MRI" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>FNAC </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.FNAC" class="form-control" placeholder="Enter FNAC..." />
+                <span asp-validation-for="InvestigationModel.FNAC" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>TRUCUT BIOPSY </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.TrucutBiopsy" class="form-control" placeholder="Enter TRUCUT BIOPSY..." />
+                <span asp-validation-for="InvestigationModel.TrucutBiopsy" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>RECEPTOR STATUS</h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.ReceptorStatus" class="form-control" placeholder="Enter Receptor status..." />
+                <span asp-validation-for="InvestigationModel.ReceptorStatus" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>MRCP </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.MRCP" class="form-control" placeholder="Enter MRCP..." />
+                <span asp-validation-for="InvestigationModel.MRCP" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>ERCP</h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.ERCP" class="form-control" placeholder="Enter ERCP..." />
+                <span asp-validation-for="InvestigationModel.ERCP" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>ENDOSCOPY - UPPER GI</h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.EndoscopyUpperGI" class="form-control" placeholder="Enter Endoscopy - upper GI..." />
+                <span asp-validation-for="InvestigationModel.EndoscopyUpperGI" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>ENDOSCOPY - LOWER GI </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.EndoscopyLowerGI" class="form-control" placeholder="Enter Endoscopy - lower GI..." />
+                <span asp-validation-for="InvestigationModel.EndoscopyLowerGI" class="text-danger"></span>
+            </div>
+        </div>
+
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>PET-CT </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.PETCT" class="form-control" placeholder="Enter PET-CT..." />
+                <span asp-validation-for="InvestigationModel.PETCT" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>TUMOR MARKERS</h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.TumorMarkers" class="form-control" placeholder="Enter Tumor markers..." />
+                <span asp-validation-for="InvestigationModel.TumorMarkers" class="text-danger"></span>
+            </div>
+        </div>
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>IVP</h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.IVP" class="form-control" placeholder="Enter IVP..." />
+                <span asp-validation-for="InvestigationModel.IVP" class="text-danger"></span>
+            </div>
+        </div>
+        
+    </div>
+    <div class="row">
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>MCU </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.MCU" class="form-control" placeholder="Enter MCU..." />
+                <span asp-validation-for="InvestigationModel.MCU" class="text-danger"></span>
+            </div>
+        </div>
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>RGU</h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.RGU" class="form-control" placeholder="Enter RGU..." />
+                <span asp-validation-for="InvestigationModel.RGU" class="text-danger"></span>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+       
+        <div class=" col-6 col-sm-3 mb-2">
+            <h4>Others </h4>
+        </div>
+        <div class="col-md-3 col-6 col-sm-4 mb-2">
+            <div class="form-group">
+                <input asp-for="InvestigationModel.OtherO" class="form-control" placeholder="Enter Others..." />
+                <span asp-validation-for="InvestigationModel.OtherO" class="text-danger"></span>
+            </div>
+        </div>
+       
+    </div>
+    <div class="form-group col-md-4">
+        <div class="alert alert-primary" role="alert" id="InvestigationsuccessMessage" style="display: none;"></div>
+        <div class="alert alert-warning" role="alert" id="InvestigationerrorMessage" style="display: none;"></div>
+
+        <input type="submit" value="Add Investigation" id="AddInvestigation" class="btn btn-primary" />
+        <input type="hidden" name="ModelsJson" id="ModelsJson" />
+    </div>
+</form>
+<div class="col-lg-12" id="investigationtable">
+    <div class="card">
+        <div class="card-header">
+            <h4 class="card-title">Investigation Table</h4>
+        </div>
+        <div class="card-body">
+            <div class="table-responsive">
+                @*<table class="table primary-table-bordered" id="myTable">*@
+                <table id="example5" class="display dataTablesCard white-border table-responsive-xl">
+                    <thead class="thead-primary">
+                        <tr>
+                            <th scope="col">Day</th>
+                            <th scope="col">Blood Sugar</th>
+                            <th scope="col">TFT</th>
+                            <th scope="col">USG</th>
+                            <th scope="col">CECT</th>
+                            <th scope="col">MRCP</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>No Data Found...</th>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,37 @@
+﻿@model App.Models.ViewModel.PatientViewModel
+@{
+    ViewData["Title"] = "OutcomeSheet";
+}
+
+<!--**********************************
+            Content body start
+        ***********************************-->
+<div class="row">
+    <div class="col-xl-12 col-lg-12">
+        <div class="card">
+
+            <div class="card-body">
+                <div class="basic-form">
+                    <form id="AddOutcomeForm">
+                        <div class="form-row">
+                            
+                            <div class="form-group col-md-6">
+                                <label for="doctor">Consultants</label>
+                                @Html.DropDownList("Outcome.Dr_ID", ViewBag.DoctorList as SelectList, "-- Select Doctor --", new { @class = "form-control" })
+                            </div>
+                            </div>
+                        <div class="alert alert-primary" role="alert" id="OutcomeSuccessMessage" style="display: none;"></div>
+                        <div class="alert alert-warning" role="alert" id="OutcomeErrorMessage" style="display: none;"></div>
+                        <input type="button" id="OutcomeBtn" onclick="getOutcomeFromModel()" class="btn btn-primary" value="Save" />
+                        <input type="hidden" name="OutcomeModelsJson" id="OutcomeModelsJson" />
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!--**********************************
+    Content body end
+***********************************-->
